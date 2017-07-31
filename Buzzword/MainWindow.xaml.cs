@@ -40,7 +40,6 @@ namespace Buzzword
 
         private void populateSimpleButton_Click(object sender, RoutedEventArgs e)
         {
-            //GetDataViaReader();
             this.gridControl.ItemsSource = _dataProvider.GetAllRecords(TableNameTextEdit.Text);
         }
 
