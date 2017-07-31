@@ -1,0 +1,28 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Buzzword"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="Buzzword.MainWindow"
+        mc:Ignorable="d"
+        Title="BuzzwoRd" Height="350" Width="525" Loaded="Window_Loaded">
+    <Grid Height="319" VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="256*"/>
+            <RowDefinition Height="63*"/>
+        </Grid.RowDefinitions>
+
+        <dxg:GridControl x:Name="gridControl" AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True" Grid.Row="0">
+            <dxg:GridControl.View>
+                <dxg:TableView ShowTotalSummary="True" AutoWidth="True" ShowGroupPanel="False"/>
+            </dxg:GridControl.View>
+        </dxg:GridControl>
+
+        <dx:SimpleButton x:Name="populateSimpleButton" Content="Populate" HorizontalAlignment="Left" Height="46" Margin="10,7,0,0" VerticalAlignment="Top" Width="141" Grid.Row="1" Click="populateSimpleButton_Click" RenderTransformOrigin="1.459,0.421" />
+        <dx:SimpleButton x:Name="connInfoSimpleButton" Content="Show Connection Info" HorizontalAlignment="Left" Height="46" Margin="173,7,0,0" VerticalAlignment="Top" Width="141" Grid.Row="1" RenderTransformOrigin="1.459,0.421" Click="connInfoSimpleButton_Click" />
+
+        <dxe:TextEdit x:Name="TableNameTextEdit" HorizontalAlignment="Left" Margin="328,9,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Height="25"/>
+
+    </Grid>
+</Window>
